@@ -1,0 +1,261 @@
+.register-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--gastify-dark) 0%, var(--gastify-medium) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.register-content {
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.logo-section {
+  margin-bottom: 30px;
+}
+
+.logo-image {
+  max-width: 280px;
+  height: auto;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+}
+
+.welcome-title {
+  font-size: 1.8rem;
+  font-weight: var(--font-bold);
+  margin-bottom: 40px;
+  color: white;
+  line-height: 1.3;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--gastify-secondary);
+  border-radius: 12px;
+  padding: 4px;
+  transition: all 0.3s ease;
+  
+  &:focus-within {
+    box-shadow: 0 0 0 2px var(--gastify-primary);
+  }
+}
+
+.input-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: white;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.form-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  padding: 16px 0;
+  outline: none;
+  
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  // Estilo para input type="date"
+  &[type="date"] {
+    color-scheme: dark;
+    
+    &::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+      cursor: pointer;
+    }
+  }
+}
+
+.password-toggle {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.terms-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.checkbox-input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--gastify-primary);
+  cursor: pointer;
+}
+
+.checkbox-label {
+  font-size: 0.95rem;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+  line-height: 1.4;
+  
+  strong {
+    color: var(--gastify-primary);
+    font-weight: var(--font-semibold);
+  }
+}
+
+.btn-next {
+  background: var(--gastify-primary);
+  color: var(--gastify-dark);
+  border: none;
+  border-radius: 12px;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: var(--font-semibold);
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(61, 205, 153, 0.3);
+  margin-top: 20px;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(61, 205, 153, 0.4);
+  }
+}
+
+.arrow {
+  font-size: 1.2rem;
+  font-weight: var(--font-bold);
+}
+
+// Responsive design mejorado
+@media (max-width: 768px) {
+  .register-content {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  .logo-image {
+    max-width: 240px;
+  }
+  
+  .welcome-title {
+    font-size: 1.6rem;
+  }
+  
+  .btn-next {
+    font-size: 1rem;
+    padding: 14px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    padding: 15px;
+  }
+  
+  .logo-image {
+    max-width: 200px;
+  }
+  
+  .welcome-title {
+    font-size: 1.4rem;
+  }
+  
+  .input-group {
+    padding: 2px;
+  }
+  
+  .input-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .form-input {
+    font-size: 0.95rem;
+    padding: 14px 0;
+  }
+  
+  .btn-next {
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
+  
+  .checkbox-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .register-container {
+    padding: 10px;
+  }
+  
+  .logo-image {
+    max-width: 180px;
+  }
+  
+  .welcome-title {
+    font-size: 1.3rem;
+  }
+  
+  .input-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .icon {
+    font-size: 1rem;
+  }
+  
+  .form-input {
+    font-size: 0.9rem;
+    padding: 12px 0;
+  }
+  
+  .btn-next {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+  
+  .checkbox-label {
+    font-size: 0.85rem;
+  }
+} 

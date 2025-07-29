@@ -1,0 +1,118 @@
+<div class="register-container">
+  <div class="register-content">
+    <!-- Logo -->
+    <div class="logo-section">
+      <img src="assets/images/gastifyLogo.png" alt="Ga$tify Logo" class="logo-image">
+    </div>
+
+    <!-- Título -->
+    <h1 class="welcome-title">¡Hola! Comencemos a crear tu cuenta</h1>
+
+    <!-- Formulario de registro -->
+    <form class="register-form">
+      <!-- Nombre de Usuario -->
+      <div class="input-group">
+        <div class="input-icon">
+          <span class="icon">👤</span>
+        </div>
+        <input 
+          type="text" 
+          placeholder="Nombre de Usuario" 
+          class="form-input"
+          [(ngModel)]="username"
+          name="username"
+        >
+      </div>
+
+      <!-- Mail -->
+      <div class="input-group">
+        <div class="input-icon">
+          <span class="icon">📧</span>
+        </div>
+        <input 
+          type="email" 
+          placeholder="Mail" 
+          class="form-input"
+          [(ngModel)]="email"
+          name="email"
+        >
+      </div>
+
+      <!-- Contraseña -->
+      <div class="input-group">
+        <div class="input-icon">
+          <span class="icon">🔒</span>
+        </div>
+        <input 
+          [type]="showPassword ? 'text' : 'password'" 
+          placeholder="Contraseña" 
+          class="form-input"
+          [(ngModel)]="password"
+          name="password"
+        >
+        <button 
+          type="button" 
+          class="password-toggle"
+          (click)="togglePassword()"
+        >
+          <span class="icon">{{ showPassword ? '👁️' : '👁️‍🗨️' }}</span>
+        </button>
+      </div>
+
+      <!-- Confirmar Contraseña -->
+      <div class="input-group">
+        <div class="input-icon">
+          <span class="icon">🔒</span>
+        </div>
+        <input 
+          [type]="showConfirmPassword ? 'text' : 'password'" 
+          placeholder="Confirmar Contraseña" 
+          class="form-input"
+          [(ngModel)]="confirmPassword"
+          name="confirmPassword"
+        >
+        <button 
+          type="button" 
+          class="password-toggle"
+          (click)="toggleConfirmPassword()"
+        >
+          <span class="icon">{{ showConfirmPassword ? '👁️' : '👁️‍🗨️' }}</span>
+        </button>
+      </div>
+
+      <!-- Fecha de Nacimiento -->
+      <div class="input-group">
+        <div class="input-icon">
+          <span class="icon">🎂</span>
+        </div>
+        <input 
+          type="date" 
+          placeholder="Fecha de Nacimiento (DD/MM/AA)" 
+          class="form-input"
+          [(ngModel)]="dateOfBirth"
+          name="dateOfBirth"
+        >
+      </div>
+
+      <!-- Términos y condiciones -->
+      <div class="terms-checkbox">
+        <input 
+          type="checkbox" 
+          id="terms" 
+          class="checkbox-input"
+          [(ngModel)]="acceptTerms"
+          name="acceptTerms"
+        >
+        <label for="terms" class="checkbox-label">
+          Acepto los <strong>términos y condiciones</strong>
+        </label>
+      </div>
+
+      <!-- Botón Siguiente -->
+      <button type="submit" class="btn-next">
+        <span>Siguiente</span>
+        <span class="arrow">→</span>
+      </button>
+    </form>
+  </div>
+</div> 

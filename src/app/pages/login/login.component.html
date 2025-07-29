@@ -1,0 +1,72 @@
+<div class="login-container">
+  <div class="login-content">
+    <!-- Logo -->
+    <div class="logo-section">
+      <img src="assets/images/gastifyLogo.png" alt="Ga$tify Logo" class="logo-image">
+    </div>
+
+    <!-- Mensaje de bienvenida -->
+    <h1 class="welcome-message">¡Bienvenido de nuevo!</h1>
+
+    <!-- Formulario de login -->
+    <form class="login-form">
+      <!-- Campo Usuario o Mail -->
+      <div class="input-group">
+        <div class="input-icon">
+          <span class="icon">👤</span>
+        </div>
+        <input 
+          type="text" 
+          placeholder="Usuario o Mail" 
+          class="form-input"
+          [(ngModel)]="username"
+          name="username"
+        >
+      </div>
+
+      <!-- Campo Contraseña -->
+      <div class="input-group">
+        <div class="input-icon">
+          <span class="icon">🔒</span>
+        </div>
+        <input 
+          [type]="showPassword ? 'text' : 'password'" 
+          placeholder="Contraseña" 
+          class="form-input"
+          [(ngModel)]="password"
+          name="password"
+        >
+        <button 
+          type="button" 
+          class="password-toggle"
+          (click)="togglePassword()"
+        >
+          <span class="icon">{{ showPassword ? '👁️' : '👁️‍🗨️' }}</span>
+        </button>
+      </div>
+
+      <!-- Olvidaste tu contraseña -->
+      <div class="forgot-password">
+        <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+      </div>
+
+      <!-- Botón de Iniciar Sesión -->
+      <button type="submit" class="btn-login">
+        <span>Iniciar Sesión</span>
+        <span class="arrow">→</span>
+      </button>
+
+      <!-- Botón de Google -->
+      <button type="button" class="btn-google">
+        <span class="google-icon">G</span>
+        <span>Conectar con Google</span>
+      </button>
+    </form>
+
+    <!-- Link de registro -->
+    <div class="register-link">
+      <span>¿Aún no tenes cuenta? </span>
+      <a href="#" class="register-text">Registrate</a>
+    </div>
+  </div>
+</div>

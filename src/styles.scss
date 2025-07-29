@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Global styles
+html, body { 
+  height: 100%; 
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ECF3FB;
+}
+
+// Custom CSS variables for Ga$tify colors
+:root {
+  --gastify-primary: #3DCD99;
+  --gastify-secondary: #3B3B58;
+  --gastify-dark: #0F152C;
+  --gastify-medium: #15233C;
+  --gastify-light: #ECF3FB;
+  
+  // Font weights
+  --font-semibold: 600;
+  --font-bold: 700;
+}
