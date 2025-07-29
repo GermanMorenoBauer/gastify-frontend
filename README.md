@@ -187,12 +187,11 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 ## 👥 Equipo
 
-- **Germán Moreno Bauer** - Desarrollador Full Stack
+- **Germán Moreno Bauer** 
 - **Ga$tify Team** - Diseño y UX
 
 ## 📞 Contacto
 
-- **Email**: german.moreno.bauer@gmail.com
 - **GitHub**: [@GermanMorenoBauer](https://github.com/GermanMorenoBauer)
 - **Proyecto**: [Ga$tify Frontend](https://github.com/GermanMorenoBauer/gastify-frontend)
 
