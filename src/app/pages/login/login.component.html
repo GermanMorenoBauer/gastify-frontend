@@ -5,68 +5,71 @@
       <img src="assets/images/gastifyLogo.png" alt="Ga$tify Logo" class="logo-image">
     </div>
 
-    <!-- Mensaje de bienvenida -->
-    <h1 class="welcome-message">¡Bienvenido de nuevo!</h1>
+    <!-- Welcome Message -->
+    <div class="welcome-section">
+      <h2 class="welcome-message">¡Bienvenido de vuelta!</h2>
+      <p class="welcome-subtitle">Inicia sesión para continuar gestionando tus finanzas</p>
+    </div>
 
-    <!-- Formulario de login -->
-    <form class="login-form">
-      <!-- Campo Usuario o Mail -->
+    <!-- Login Form -->
+    <form class="login-form" (ngSubmit)="onSubmit()">
+      <!-- Username/Email Field -->
       <div class="input-group">
         <div class="input-icon">
-          <span class="icon">👤</span>
+          <i class="mdi mdi-account"></i>
         </div>
         <input 
           type="text" 
-          placeholder="Usuario o Mail" 
-          class="form-input"
+          class="form-input" 
+          placeholder="Usuario o email"
           [(ngModel)]="username"
           name="username"
-        >
+          required>
       </div>
 
-      <!-- Campo Contraseña -->
+      <!-- Password Field -->
       <div class="input-group">
         <div class="input-icon">
-          <span class="icon">🔒</span>
+          <i class="mdi mdi-lock"></i>
         </div>
         <input 
           [type]="showPassword ? 'text' : 'password'" 
-          placeholder="Contraseña" 
-          class="form-input"
+          class="form-input" 
+          placeholder="Contraseña"
           [(ngModel)]="password"
           name="password"
-        >
+          required>
         <button 
           type="button" 
           class="password-toggle"
-          (click)="togglePassword()"
-        >
-          <span class="icon">{{ showPassword ? '👁️' : '👁️‍🗨️' }}</span>
+          (click)="togglePasswordVisibility()">
+          <i [class]="showPassword ? 'mdi mdi-eye-off' : 'mdi mdi-eye'"></i>
         </button>
       </div>
 
-      <!-- Olvidaste tu contraseña -->
-      <div class="forgot-password">
+      <!-- Forgot Password Link -->
+      <div class="forgot-section">
         <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
       </div>
 
-      <!-- Botón de Iniciar Sesión -->
+      <!-- Login Button -->
       <button type="submit" class="btn-login">
-        <span>Iniciar Sesión</span>
-        <span class="arrow">→</span>
-      </button>
-
-      <!-- Botón de Google -->
-      <button type="button" class="btn-google">
-        <span class="google-icon">G</span>
-        <span>Conectar con Google</span>
+        Iniciar Sesión
       </button>
     </form>
 
-    <!-- Link de registro -->
-    <div class="register-link">
-      <span>¿Aún no tenes cuenta? </span>
-      <a href="#" class="register-text">Registrate</a>
+    <!-- Google Login -->
+    <div class="google-section">
+      <button class="btn-google" (click)="onGoogleLogin()">
+        <img src="assets/images/google-icon.png" alt="Google" class="google-icon">
+        Conectar con Google
+      </button>
+    </div>
+
+    <!-- Register Link -->
+    <div class="register-section">
+      <p class="register-text">¿No tienes cuenta?</p>
+      <a routerLink="/register" class="register-link">Registrate</a>
     </div>
   </div>
 </div>

@@ -5,113 +5,112 @@
       <img src="assets/images/gastifyLogo.png" alt="Ga$tify Logo" class="logo-image">
     </div>
 
-    <!-- Título -->
-    <h1 class="welcome-title">¡Hola! Comencemos a crear tu cuenta</h1>
+    <!-- Title -->
+    <div class="title-section">
+      <h2 class="welcome-title">Crear cuenta</h2>
+      <p class="welcome-subtitle">Comienza a gestionar tus finanzas de manera inteligente</p>
+    </div>
 
-    <!-- Formulario de registro -->
-    <form class="register-form">
-      <!-- Nombre de Usuario -->
+    <!-- Register Form -->
+    <form class="register-form" (ngSubmit)="onSubmit()">
+      <!-- Username Field -->
       <div class="input-group">
         <div class="input-icon">
-          <span class="icon">👤</span>
+          <i class="mdi mdi-account"></i>
         </div>
         <input 
           type="text" 
-          placeholder="Nombre de Usuario" 
-          class="form-input"
+          class="form-input" 
+          placeholder="Nombre de usuario"
           [(ngModel)]="username"
           name="username"
-        >
+          required>
       </div>
 
-      <!-- Mail -->
+      <!-- Email Field -->
       <div class="input-group">
         <div class="input-icon">
-          <span class="icon">📧</span>
+          <i class="mdi mdi-email"></i>
         </div>
         <input 
           type="email" 
-          placeholder="Mail" 
-          class="form-input"
+          class="form-input" 
+          placeholder="Correo electrónico"
           [(ngModel)]="email"
           name="email"
-        >
+          required>
       </div>
 
-      <!-- Contraseña -->
+      <!-- Password Field -->
       <div class="input-group">
         <div class="input-icon">
-          <span class="icon">🔒</span>
+          <i class="mdi mdi-lock"></i>
         </div>
         <input 
           [type]="showPassword ? 'text' : 'password'" 
-          placeholder="Contraseña" 
-          class="form-input"
+          class="form-input" 
+          placeholder="Contraseña"
           [(ngModel)]="password"
           name="password"
-        >
+          required>
         <button 
           type="button" 
           class="password-toggle"
-          (click)="togglePassword()"
-        >
-          <span class="icon">{{ showPassword ? '👁️' : '👁️‍🗨️' }}</span>
+          (click)="togglePasswordVisibility()">
+          <i [class]="showPassword ? 'mdi mdi-eye-off' : 'mdi mdi-eye'"></i>
         </button>
       </div>
 
-      <!-- Confirmar Contraseña -->
+      <!-- Confirm Password Field -->
       <div class="input-group">
         <div class="input-icon">
-          <span class="icon">🔒</span>
+          <i class="mdi mdi-lock-check"></i>
         </div>
         <input 
           [type]="showConfirmPassword ? 'text' : 'password'" 
-          placeholder="Confirmar Contraseña" 
-          class="form-input"
+          class="form-input" 
+          placeholder="Confirmar contraseña"
           [(ngModel)]="confirmPassword"
           name="confirmPassword"
-        >
+          required>
         <button 
           type="button" 
           class="password-toggle"
-          (click)="toggleConfirmPassword()"
-        >
-          <span class="icon">{{ showConfirmPassword ? '👁️' : '👁️‍🗨️' }}</span>
+          (click)="toggleConfirmPasswordVisibility()">
+          <i [class]="showConfirmPassword ? 'mdi mdi-eye-off' : 'mdi mdi-eye'"></i>
         </button>
       </div>
 
-      <!-- Fecha de Nacimiento -->
+      <!-- Date of Birth Field -->
       <div class="input-group">
         <div class="input-icon">
-          <span class="icon">🎂</span>
+          <i class="mdi mdi-calendar"></i>
         </div>
         <input 
           type="date" 
-          placeholder="Fecha de Nacimiento (DD/MM/AA)" 
-          class="form-input"
+          class="form-input" 
+          placeholder="Fecha de nacimiento"
           [(ngModel)]="dateOfBirth"
           name="dateOfBirth"
-        >
+          required>
       </div>
 
-      <!-- Términos y condiciones -->
-      <div class="terms-checkbox">
-        <input 
-          type="checkbox" 
-          id="terms" 
-          class="checkbox-input"
-          [(ngModel)]="acceptTerms"
-          name="acceptTerms"
-        >
-        <label for="terms" class="checkbox-label">
-          Acepto los <strong>términos y condiciones</strong>
+      <!-- Terms and Conditions -->
+      <div class="terms-section">
+        <label class="checkbox-label">
+          <input 
+            type="checkbox" 
+            [(ngModel)]="acceptTerms"
+            name="acceptTerms"
+            required>
+          <span class="checkmark"></span>
+          Acepto los <a href="#" class="terms-link">términos y condiciones</a>
         </label>
       </div>
 
-      <!-- Botón Siguiente -->
+      <!-- Next Button -->
       <button type="submit" class="btn-next">
-        <span>Siguiente</span>
-        <span class="arrow">→</span>
+        Siguiente
       </button>
     </form>
   </div>

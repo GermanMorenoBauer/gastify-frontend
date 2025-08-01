@@ -1,177 +1,257 @@
-# Ga$tify Frontend 🚀
+# Ga$tify Frontend
 
-**Aplicación móvil de gestión de gastos personales** desarrollada con Angular y TypeScript.
+## 📱 Aplicación Móvil de Gestión de Gastos Personales
 
-## 📱 Visión del Proyecto
+Ga$tify es una aplicación móvil diseñada para transformar la manera en que las personas gestionan sus finanzas personales, ofreciendo una plataforma accesible, automatizada y educativa con análisis inteligentes y visualización clara de gastos.
 
-Transformar la manera en que las personas se relacionan con su dinero, facilitando el control de sus finanzas personales con una app accesible, automatizada y educativa. Buscamos empoderar financieramente a cada usuario mediante análisis inteligentes, automatización y visualización clara de sus gastos.
+## 🚀 Guía de Instalación y Ejecución
 
-## 🎯 Características Principales
+### Prerrequisitos
 
-### ✅ Implementadas
-- **Pantalla de Bienvenida** - Landing page con logo y características principales
-- **Sistema de Login** - Autenticación con usuario/mail y contraseña
-- **Registro de Usuarios** - Formulario completo con validaciones
-- **Diseño Responsive** - Optimizado para móviles, tablets y desktop
-- **Tema Personalizado** - Colores oficiales de Ga$tify
+Antes de comenzar, asegúrate de tener instalado:
 
-### 🚧 En Desarrollo
-- Dashboard principal
-- Registro de gastos
-- Categorización automática
-- Estadísticas y reportes
-- Integración con WhatsApp Bot
-- Análisis inteligente con OpenAI
+- **Node.js** (versión 18.x o superior)
+- **npm** (viene con Node.js)
+- **Git**
 
-## 🛠️ Tecnologías Utilizadas
+### Verificar instalaciones
 
+```bash
+# Verificar Node.js
+node --version
+
+# Verificar npm
+npm --version
+
+# Verificar Git
+git --version
+```
+
+### 1. Clonar el repositorio
+
+```bash
+# Clonar el repositorio frontend
+git clone https://github.com/GermanMorenoBauer/gastify-frontend.git
+
+# Entrar al directorio del proyecto
+cd gastify-frontend
+```
+
+### 2. Instalar dependencias
+
+```bash
+# Instalar todas las dependencias del proyecto
+npm install
+```
+
+### 3. Ejecutar el proyecto
+
+```bash
+# Iniciar el servidor de desarrollo
+npm start
+
+# O alternativamente
+ng serve
+```
+
+### 4. Acceder a la aplicación
+
+Una vez que el servidor esté corriendo, abre tu navegador y ve a:
+
+```
+http://localhost:4200
+```
+
+## 📋 Comandos Útiles
+
+```bash
+# Instalar dependencias
+npm install
+
+# Ejecutar en modo desarrollo
+npm start
+ng serve
+
+# Ejecutar en modo desarrollo con recarga automática
+ng serve --watch
+
+# Construir para producción
+npm run build
+ng build
+
+# Ejecutar tests
+npm test
+ng test
+
+# Ejecutar linting
+npm run lint
+ng lint
+
+# Verificar el estado del proyecto
+ng version
+```
+
+## 🏗️ Estructura del Proyecto
+
+```
+gastify-frontend/
+├── src/
+│   ├── app/
+│   │   ├── pages/
+│   │   │   ├── welcome/          # Pantalla de bienvenida
+│   │   │   ├── login/            # Pantalla de login
+│   │   │   └── register/         # Pantalla de registro
+│   │   ├── app.component.html    # Componente principal
+│   │   ├── app.component.ts
+│   │   ├── app.component.scss
+│   │   ├── app.routes.ts         # Configuración de rutas
+│   │   └── app.config.ts
+│   ├── assets/
+│   │   └── images/
+│   │       ├── gastifyLogo.png   # Logo principal
+│   │       └── google-icon.png   # Icono de Google
+│   ├── styles.scss               # Estilos globales
+│   └── index.html
+├── package.json
+├── angular.json
+├── tsconfig.json
+└── README.md
+```
+
+## 🎨 Tecnologías Implementadas
+
+### Frontend
 - **Angular 18** - Framework principal
 - **TypeScript** - Lenguaje de programación
-- **SCSS** - Preprocesador CSS
-- **Poppins** - Tipografía oficial
-- **Responsive Design** - Mobile-first approach
+- **SCSS** - Preprocesador de CSS
+- **Material Design Icons (MDI)** - Biblioteca de iconos
+- **Responsive Design** - Diseño adaptable
+
+### Características Implementadas
+- ✅ **Pantalla de Bienvenida** - Landing page con logo y botones de acción
+- ✅ **Pantalla de Login** - Formulario de autenticación con Google
+- ✅ **Pantalla de Registro** - Formulario de registro de usuarios
+- ✅ **Diseño Responsive** - Adaptable a móviles, tablets y desktop
+- ✅ **Paleta de Colores Ga$tify** - Colores personalizados de la marca
 
 ## 🎨 Paleta de Colores
 
-```css
---gastify-primary: #3DCD99    /* Verde turquesa */
---gastify-secondary: #3B3B58  /* Púrpura grisáceo */
---gastify-dark: #0F152C       /* Azul oscuro */
---gastify-medium: #15233C     /* Azul medio */
---gastify-light: #ECF3FB      /* Azul muy claro */
+```scss
+// Colores principales de Ga$tify
+--gastify-dark: #0F152C;      // Fondo principal
+--gastify-green: #3DCD99;     // Verde principal
+--gastify-purple: #3B3B58;    // Púrpura secundario
+--gastify-blue: #15233C;      // Azul oscuro
+--gastify-light: #FFFFFF;     // Blanco/azul claro
 ```
 
 ## 📱 Pantallas Implementadas
 
-### 1. **Pantalla de Bienvenida** (`/`)
-- Logo animado de Ga$tify
-- Mensaje de bienvenida
-- Botones de "Crear cuenta" e "Iniciar sesión"
-- Características principales destacadas
+### 1. Pantalla de Bienvenida (`/`)
+- Logo de Ga$tify prominente
+- Título y subtítulo descriptivos
+- Botones de acción: "Crear cuenta" e "Iniciar sesión"
+- Características destacadas con iconos MDI
+- Diseño completamente responsive
 
-### 2. **Pantalla de Login** (`/login`)
-- Formulario de autenticación
-- Campos: Usuario/Mail y Contraseña
-- Toggle de visibilidad de contraseña
-- Botón "¿Olvidaste tu contraseña?"
-- Login con Google
-- Link de registro
+### 2. Pantalla de Login (`/login`)
+- Logo de Ga$tify
+- Formulario de login con campos de email/username y contraseña
+- Botón de "Conectar con Google"
+- Enlaces de "¿Olvidaste tu contraseña?" y "Registrate"
+- Diseño responsive y accesible
 
-### 3. **Pantalla de Registro** (`/register`)
+### 3. Pantalla de Registro (`/register`)
+- Logo de Ga$tify
 - Formulario completo de registro
-- Campos: Usuario, Mail, Contraseña, Confirmar Contraseña, Fecha de Nacimiento
+- Campos: username, email, contraseña, confirmar contraseña, fecha de nacimiento
 - Checkbox de términos y condiciones
 - Botón "Siguiente" para continuar
+- Diseño responsive
 
-## 🚀 Instalación y Configuración
+## 🔧 Configuración del Entorno
 
-### Prerrequisitos
-- Node.js (v18 o superior)
-- npm o yarn
-- Git
+### Variables de Entorno
+El proyecto está configurado para trabajar con variables de entorno. Crea un archivo `.env` en la raíz del proyecto si necesitas configuraciones específicas.
 
-### Pasos de Instalación
+### Configuración de Angular
+- **TypeScript**: Configurado para Angular 18
+- **SCSS**: Preprocesador de estilos
+- **Routing**: Configurado con rutas standalone
+- **Assets**: Configurados para imágenes y recursos
 
-1. **Clonar el repositorio**
-   ```bash
-   git clone https://github.com/GermanMorenoBauer/gastify-frontend.git
-   cd gastify-frontend
-   ```
+## 🚀 Desarrollo
 
-2. **Instalar dependencias**
-   ```bash
-   npm install
-   ```
+### Estructura de Componentes
+Todos los componentes están configurados como **standalone components** siguiendo las mejores prácticas de Angular 18.
 
-3. **Ejecutar en desarrollo**
-   ```bash
-   npm start
-   # o
-   ng serve --open
-   ```
+### Estilos
+- **SCSS** para estilos modulares
+- **Variables CSS** para la paleta de colores
+- **Media queries** para diseño responsive
+- **Fuente Poppins** importada desde Google Fonts
 
-4. **Compilar para producción**
-   ```bash
-   ng build --configuration production
-   ```
-
-## 📁 Estructura del Proyecto
-
-```
-src/
-├── app/
-│   ├── pages/
-│   │   ├── welcome/          # Pantalla de bienvenida
-│   │   ├── login/           # Pantalla de login
-│   │   └── register/        # Pantalla de registro
-│   ├── app.component.html   # Componente principal
-│   ├── app.routes.ts        # Configuración de rutas
-│   └── app.config.ts        # Configuración de la app
-├── assets/
-│   └── images/
-│       └── gastifyLogo.png  # Logo oficial
-├── styles.scss              # Estilos globales
-└── index.html              # HTML principal
-```
-
-## 🎨 Diseño y UX
-
-### Responsive Design
-- **768px** - Tablets y pantallas medianas
-- **480px** - Móviles grandes (iPhone, Android)
-- **360px** - Móviles pequeños
-
-### Características de UX
-- **Mobile-first** approach
-- **Touch-friendly** botones y campos
-- **Accesibilidad** mejorada
-- **Animaciones** suaves
-- **Feedback visual** en interacciones
-
-## 🔧 Scripts Disponibles
-
-```bash
-npm start          # Servidor de desarrollo
-npm run build      # Compilar para producción
-npm run test       # Ejecutar tests
-npm run lint       # Linting del código
-```
-
-## 🌐 URLs de Desarrollo
-
-- **Bienvenida**: `http://localhost:4200/`
-- **Login**: `http://localhost:4200/login`
-- **Registro**: `http://localhost:4200/register`
+### Iconos
+- **Material Design Icons (MDI)** para iconografía consistente
+- Iconos personalizados para funcionalidades específicas
 
 ## 🔗 Integración con Backend
 
 El frontend está preparado para integrarse con el backend de Ga$tify:
 
-- **API Base**: `http://localhost:5000/api`
-- **Endpoints principales**:
-  - `POST /auth/register` - Registro de usuarios
-  - `POST /auth/login` - Autenticación
-  - `PUT /auth/profile` - Actualización de perfil
+- **APIs REST** para autenticación y gestión de datos
+- **JWT** para manejo de sesiones
+- **MongoDB** como base de datos
+- **Node.js + TypeScript** en el backend
 
-## 📱 Próximas Funcionalidades
+## 📱 Responsive Design
 
-### Fase 2 - Dashboard y Gestión
-- [ ] Dashboard principal con resumen financiero
-- [ ] Formulario de registro de gastos
-- [ ] Categorización automática
-- [ ] Historial de transacciones
+La aplicación está optimizada para:
+- 📱 **Móviles** (320px - 480px)
+- 📱 **Tablets** (481px - 768px)
+- 💻 **Desktop** (769px+)
 
-### Fase 3 - Análisis y Reportes
-- [ ] Gráficos y estadísticas
-- [ ] Reportes mensuales
-- [ ] Metas de ahorro
-- [ ] Alertas y notificaciones
+## 🐛 Solución de Problemas
 
-### Fase 4 - Integración Avanzada
-- [ ] WhatsApp Bot para registro automático
-- [ ] Análisis inteligente con OpenAI
-- [ ] Exportación de datos
-- [ ] Sincronización multiplataforma
+### Error: "Could not find the '@angular-devkit/build-angular:dev-server'"
+```bash
+npm install
+npm start
+```
+
+### Error: "Node packages may not be installed"
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+### Error: "Port 4200 is already in use"
+```bash
+# Usar un puerto diferente
+ng serve --port 4201
+```
+
+### Error: "Module not found"
+```bash
+npm install
+npm start
+```
+
+## 📝 Scripts Disponibles
+
+```bash
+# Desarrollo
+npm start          # Inicia el servidor de desarrollo
+npm run build      # Construye para producción
+npm run test       # Ejecuta tests
+npm run lint       # Ejecuta linting
+
+# Angular CLI
+ng serve           # Servidor de desarrollo
+ng build           # Construcción
+ng test            # Tests
+ng lint            # Linting
+```
 
 ## 🤝 Contribución
 
@@ -187,14 +267,27 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 ## 👥 Equipo
 
-- **Germán Moreno Bauer** 
-- **Ga$tify Team** - Diseño y UX
+- **Germán Moreno Bauer** - Desarrollador Full Stack
+- **Contacto**: [Tu email de contacto]
 
-## 📞 Contacto
+## 🚀 Roadmap
 
-- **GitHub**: [@GermanMorenoBauer](https://github.com/GermanMorenoBauer)
-- **Proyecto**: [Ga$tify Frontend](https://github.com/GermanMorenoBauer/gastify-frontend)
+### Próximas Funcionalidades
+- [ ] Dashboard principal con gráficos
+- [ ] Registro de gastos manual
+- [ ] Integración con WhatsApp Bot
+- [ ] Análisis inteligente con OpenAI
+- [ ] Configuración de perfil de usuario
+- [ ] Notificaciones push
+- [ ] Exportación de reportes
+
+### Mejoras Técnicas
+- [ ] Implementación de PWA
+- [ ] Optimización de performance
+- [ ] Tests unitarios y de integración
+- [ ] CI/CD pipeline
+- [ ] Deploy automático
 
 ---
 
-**Ga$tify** - Transformando la manera en que te relacionas con tu dinero 💰
+**¡Gracias por usar Ga$tify! 💚**
